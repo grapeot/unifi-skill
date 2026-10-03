@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "note": "Anonymized UniFi controller response fixture (single controller sysinfo object). MACs are 02:00: pseudo MACs, LAN IPs are TEST-NET (192.0.2.x), SSIDs are home-main/home-iot/home-6g, AP names are AP-N, ObjectIds are 5f00-prefixed, epoch timestamps are shifted by a constant, secret fields are REDACTED. Structure mirrors the real endpoint. Controller hostname/serial identifiers removed.",
+    "endpoint": "/proxy/network/api/s/default/stat/sysinfo",
+    "captured": "2026-10-09",
+    "ap_names": "AP fixtures use AP-1..AP-N; product model codes (U6ENT, UALR6v2, UAPA697) are UniFi product names."
+  },
+  "data": {
+    "name": "UOS Server",
+    "version": "10.5.67",
+    "build": "atag_10.5.67_35187",
+    "uptime": 682725,
+    "ip_addrs": [
+      "192.0.2.178",
+      "192.0.2.58",
+      "169.254.12.165",
+      "203.0.113.83"
+    ],
+    "data_retention_days": 90,
+    "inform_port": 8080,
+    "https_port": 8443,
+    "timezone": "America/Los_Angeles",
+    "update_available": false,
+    "update_downloaded": false
+  }
+}

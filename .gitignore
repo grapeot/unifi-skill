@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.env
+tmp/
+# UniFi session cookies — never commit
+*cookie*.txt
+cookie*.txt
+*.cookie
+unifi_export/

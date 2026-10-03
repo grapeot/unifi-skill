@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "note": "Anonymized UniFi controller response fixture (list of {configuration, details, statistics}). MACs are 02:00: pseudo MACs, LAN IPs are TEST-NET (192.0.2.x), SSIDs are home-main/home-iot/home-6g, AP names are AP-N, ObjectIds are 5f00-prefixed, epoch timestamps are shifted by a constant, secret fields are REDACTED. Structure mirrors the real endpoint.",
+    "endpoint": "/proxy/network/v2/api/site/default/wlan/enriched-configuration",
+    "captured": "2026-10-09"
+  },
+  "data": [
+    {
+      "configuration": {
+        "_id": "5f00fe50a24cacf6ab74fc8d",
+        "name": "home-main",
+        "enabled": true,
+        "security": "wpapsk",
+        "wpa_mode": "wpa2",
+        "wpa3_support": true,
+        "wpa3_transition": true,
+        "pmf_mode": "optional",
+        "hide_ssid": false,
+        "is_guest": false,
+        "wlan_band": "both",
+        "wlan_bands": [
+          "2g",
+          "5g",
+          "6g"
+        ],
+        "networkconf_id": "5f005213d3826ade3b440413",
+        "ap_group_mode": "all",
+        "x_passphrase": "REDACTED"
+      },
+      "details": {
+        "creation_timestamp": 1700002405
+      },
+      "statistics": {
+        "current_access_point_count": 5,
+        "current_client_count": 39,
+        "current_satisfaction": 96,
+        "peak_client_count": 53
+      }
+    },
+    {
+      "configuration": {
+        "_id": "5f007f2697cd70c311cc15af",
+        "name": "home-iot",
+        "enabled": true,
+        "security": "wpapsk",
+        "wpa_mode": "wpa2",
+        "wpa3_support": true,
+        "wpa3_transition": true,
+        "pmf_mode": "optional",
+        "hide_ssid": false,
+        "is_guest": false,
+        "wlan_band": "2g",
+        "wlan_bands": [
+          "2g"
+        ],
+        "networkconf_id": "5f005213d3826ade3b440413",
+        "ap_group_mode": "all",
+        "x_passphrase": "REDACTED"
+      },
+      "details": {
+        "creation_timestamp": 1700002798
+      },
+      "statistics": {
+        "current_access_point_count": 5,
+        "current_client_count": 0,
+        "current_satisfaction": -1,
+        "peak_client_count": 0
+      }
+    }
+  ]
+}

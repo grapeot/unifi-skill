@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Set up venv
+        run: |
+          uv venv
+          uv pip install -e '.[dev]'
+      - name: Unit tests (offline tier; integration tier skips)
+        run: uv run python -m pytest tests/test_unit.py -q
+      - name: Read-only invariant standalone check
+        run: uv run python -m pytest tests/test_unit.py -q -k "read_only or no_http_write"

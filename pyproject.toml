@@ -1,0 +1,28 @@
+[project]
+name = "unifi-skill"
+version = "0.1.0"
+description = "Agent-facing read-only CLI for a self-hosted UniFi Network Controller (RF status, clients, APs, SSIDs, config snapshots)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+unifi-skill = "unifi_skill.cli:main"
+unifi = "unifi_skill.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: opt-in live controller tests (set RUN_UNIFI_INTEGRATION=1 plus UNIFI_COOKIE_FILE and UNIFI_BASE_URL)",
+]

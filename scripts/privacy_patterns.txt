@@ -1,0 +1,14 @@
+# Maintainer privacy-scan patterns (one extended regex per line).
+# These are SELF-REFERENTIAL pattern strings for scanning a PUBLIC repo, not
+# secrets themselves. scripts/privacy_scan.sh consumes this file;
+# tests/test_unit.py loads it for the fixture self-check. Keep every line a
+# pattern, never a real value.
+shability
+192\.168\.180\.
+/Users/grapeot
+grapeot@
+op://dev/
+TOKEN=[A-Za-z0-9]{20,}
+JSESSIONID=[A-Za-z0-9]{20,}
+fc-[a-f0-9]{20,}
+tvly-[A-Za-z0-9]{20,}
