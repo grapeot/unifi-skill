@@ -23,6 +23,15 @@
   `radio_table` vs `radio_table_stats`, 200-with-login-page on expired
   session.
 
+### 2026-10-03 — public launch
+
+- Repo published to GitHub (master), branch protection verified:
+  0 required reviewers, admin enforcement on (no bypass), direct pushes to
+  master rejected. CI runs the offline tier on Python 3.9/3.12.
+- Ecosystem registration entries added in context-infrastructure (zh) and
+  context-infrastructure-en (the SKILL_ECOSYSTEM.md links that previously
+  404ed now resolve).
+
 ## Lessons Learned
 
 - **Expired cookie can look like HTTP 200.** Some controller generations
